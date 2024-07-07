@@ -1,6 +1,6 @@
 import React from "react";
-import { ReactComponent as Like } from "../../public/images/Vector.svg";
-import { ReactComponent as Shop } from "../../public/images/cart.svg";
+import { ReactComponent as Like } from "../images/Vector.svg";
+import { ReactComponent as Shop } from "../images/cart.svg";
 import Images from "./Images";
 
 export function List(props) {

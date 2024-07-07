@@ -1,8 +1,8 @@
 import React from "react";
-import backgroundImage from "../../public/images/background.png";
+import backgroundImage from "../images/background.png";
 import { para } from "../productImage";
 
-export function Header() {
+export default function Header() {
   const divContainerStyle = {
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: "cover",

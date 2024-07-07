@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { ReactComponent as Logo } from "../../public/images/Eurosial.svg";
-import { ReactComponent as Verizon } from "../../public/images/Logo.svg.svg";
-import { ReactComponent as Paypal } from "../../public/images/paypal_logo.svg.svg";
-import { ReactComponent as Mastercard } from "../../public/images/mastercard_symbol.svg.svg";
-import { ReactComponent as Visa } from "../../public/images/visa_inc_logo.svg.svg";
-import { ReactComponent as Verve } from "../../public/images/verve_direct_logo.png.svg";
+import { ReactComponent as Logo } from "../images/Eurosial.svg";
+import { ReactComponent as Verizon } from "../images/Logo.svg.svg";
+import { ReactComponent as Paypal } from "../images/paypal_logo.svg.svg";
+import { ReactComponent as Mastercard } from "../images/mastercard_symbol.svg.svg";
+import { ReactComponent as Visa } from "../images/visa_inc_logo.svg.svg";
+import { ReactComponent as Verve } from "../images/verve_direct_logo.png.svg";
 
 import { para } from "../productImage";
 import Legal from "./Legal";

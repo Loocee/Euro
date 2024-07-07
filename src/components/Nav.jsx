@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as Logo } from "../../public/images/Eurosial.svg";
+import { ReactComponent as Logo } from "../images/Eurosial.svg";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
