@@ -4,11 +4,5 @@ import { CartHeading } from "./Heading";
 import Footer from "./Footer";
 
 export const Cart = () => {
-  return (
-    <div>
-      <Navbar />
-      <CartHeading />
-      <Footer />
-    </div>
-  );
+  return <div></div>;
 };
