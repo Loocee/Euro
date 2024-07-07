@@ -119,3 +119,17 @@ export const similarProducts = [
     imgURL: "./images/image 26.png",
   },
 ];
+export const shipOption = [
+  {
+    id: 1,
+    text: "Swift Delivery",
+  },
+  {
+    id: 2,
+    text: "Standard Delivery",
+  },
+  {
+    id: 3,
+    text: "Swift Delivery",
+  },
+];

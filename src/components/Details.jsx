@@ -1,27 +1,65 @@
 import React from "react";
 
-export function TopLeft() {
+export function TopLeft(props) {
   return (
     <div>
-    <div class="form-check">  
-<label class="form-check-label" for="flexRadioDefault2">
-    Default checked radio
-  </label>
+      <h3>Shipping Method</h3>
+      <div>
+        <div>
+          <h4>{props.text}</h4>
+          <p>We ship immediately take between 7 - 8 working days</p>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
 
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-</div>
-
-  <div class="form-check">
-  <label class="form-check-label" for="flexRadioDefault1">
-    Default radio
-  </label>
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-</div>
-<div class="form-check">
-  <label class="form-check-label" for="flexRadioDefault1">
-    Default radio
-  </label>
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-</div>
-</div>);
+export function Details() {
+  return (
+    <div>
+      <h3>Personal Details</h3>
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">
+            Email address
+          </label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1">
+            Check me out
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
 }
