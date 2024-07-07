@@ -1,0 +1,28 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.category-filter,
+.price-filter {
+  display: flex;
+}
+
+.input-group-text {
+  background-color: white !important;
+  height: 100%;
+  border: none;
+  color: #6c757d;
+}
+
+.input-group-text i {
+  background-color: white;
+  width: 1em;
+  height: 1em;
+}
+
+.div-container {
+  background-image: url("public/images/background.png");
+  background-size: cover;
+  background-position: center;
+}
