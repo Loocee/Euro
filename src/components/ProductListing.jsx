@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as Like } from "../images/Vector.svg";
+import { ReactComponent as Like } from "../images/Vector (4).svg";
 import { ReactComponent as Shop } from "../images/cart.svg";
 import Images from "./Images";
 

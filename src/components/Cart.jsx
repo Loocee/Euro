@@ -1,12 +1,14 @@
 import React from "react";
-import Navbar from "./Nav";
+import { Navbar, Filter } from "./Nav";
 import { CartHeading } from "./Heading";
+import Footer from "./Footer";
 
 export const Cart = () => {
   return (
     <div>
       <Navbar />
       <CartHeading />
-    </div> 
+      <Footer />
+    </div>
   );
-}
+};
