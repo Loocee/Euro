@@ -10,7 +10,7 @@ export const newProducts = [
   {
     id: 3,
     imgURL: "./image45.png",
-  }
+  },
 ];
 
 export const availableProducts = [
@@ -61,7 +61,7 @@ export const availableProducts = [
   {
     id: 12,
     imgURL: "./images/image 29.png",
-  }
+  },
 ];
 
 export const para =
@@ -78,5 +78,44 @@ export const cartProducts = [
   {
     id: 3,
     imgURL: "./images/image 44.png",
-  }
+  },
+];
+
+export const similarProducts = [
+  {
+    id: 1,
+    imgURL: "./images/image 31.png",
+  },
+  {
+    id: 2,
+    imgURL: "./images/image 41.png",
+  },
+  {
+    id: 3,
+    imgURL: "./images/image 17.png",
+  },
+  {
+    id: 4,
+    imgURL: "./images/image45.png",
+  },
+  {
+    id: 5,
+    imgURL: "./images/image 47.png",
+  },
+  {
+    id: 6,
+    imgURL: "./images/image46.png",
+  },
+  {
+    id: 7,
+    imgURL: "./images/image48.png",
+  },
+  {
+    id: 8,
+    imgURL: "./images/image 43.png",
+  },
+  {
+    id: 9,
+    imgURL: "./images/image 26.png",
+  },
 ];

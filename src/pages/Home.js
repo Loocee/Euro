@@ -37,4 +37,3 @@ export default function Home() {
     </>
   );
 }
-//       /* {cartProducts.map(createCart)} */
