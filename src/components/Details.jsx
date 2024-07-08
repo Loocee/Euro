@@ -26,40 +26,95 @@ export function Details() {
     <div>
       <h3>Personal Details</h3>
       <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">
-            Email address
+        <div>
+          <div>
+            <label htmlFor="input-fname" className="form-label">
+              First Name
+            </label>
+            <input
+              type="text"
+              id="input-fname"
+              className="form-control"
+              placeholder="Joseph"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="input-sname" className="form-label">
+              Surname
+            </label>
+            <input
+              type="text"
+              id="input-sname"
+              className="form-control"
+              placeholder="Peter"
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <label htmlFor="input-state" className="form-label">
+            State
+          </label>
+          <input
+            type="text"
+            id="input-state"
+            className="form-control"
+            placeholder="Lagos State"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="input-number" className="form-label">
+            Phone Number
+          </label>
+          <input
+            type="text"
+            id="input-number"
+            className="form-control"
+            pattern="[0-9]{11}"
+            placeholder="07013213455"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="email" className="form-label">
+            Email Address
           </label>
           <input
             type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
-          </div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
+            className="form-control"
+            id="email"
+            placeholder="joanqe@gmail.com"
           />
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1">
-            Check me out
-          </label>
-        </div>
-        <button type="submit" class="btn btn-primary">
-          Submit
-        </button>
       </form>
+    </div>
+  );
+}
+
+export function Payment() {
+  return (
+    <div>
+      <h3>Payment</h3>
+      <div>
+        <button>
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+          />
+          Card
+        </button>
+        <button>
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+          />
+          Bank Transfer
+        </button>
+      </div>
     </div>
   );
 }
