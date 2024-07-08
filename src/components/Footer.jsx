@@ -26,21 +26,17 @@ export default function Footer() {
       <h4>Eurosial</h4>
       <hr />
 
-      <div>
+      <div className="footer-second-div">
         <div className="footer-slogan">
           <p>{para}</p>
         </div>
-        <div>
+        <div className="legal-container">
           <Legal />
-        </div>
-        <div>
           <Legal />
-        </div>
-        <div>
           <Legal />
         </div>
       </div>
-      <div>
+      <div className="footer-second-div">
         <div className="copy">
           <p>All rights reserved &copy; {year}</p>
         </div>

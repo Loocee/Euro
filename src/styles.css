@@ -1,14 +1,20 @@
 body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   background-color: #f8f8f8;
   min-height: 100vh;
+}
+
+.body,
+.control-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body,
 footer {
   width: 1512px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
 }
 .category-filter,
 .price-filter {
@@ -38,7 +44,8 @@ footer {
 
 .home-body,
 .new-product,
-.available-products {
+.available-products,
+footer {
   display: grid;
   gap: auto;
 }
@@ -77,7 +84,8 @@ nav {
   height: 676.31px;
 }
 
-.new-products {
+.new-products,
+.legal-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
   grid-gap: 20px; /* Adjust the value to set the desired gap size */
@@ -98,6 +106,13 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+
+.home-control,
+.footer-second-div {
+  display: flex;
+  justify-content: space-between;
+}
+
 .home-control,
 .legal-div p,
 footer span {
@@ -117,6 +132,7 @@ footer {
   height: 640px;
   color: white;
   background-color: #363535;
+  padding: 20px 52.5px;
 }
 
 footer hr {
@@ -130,7 +146,7 @@ footer hr {
 }
 
 .legal-div {
-  width: 746px;
+  width: 178px;
   height: 189px;
 }
 

@@ -25,22 +25,32 @@ function CartPage() {
   const handleNextClick = () => {
     // Code to handle next button click
   };
+
   return (
-    <div>
-      <Navbar />
-      <CartHeading />
-      <div>
-        {cartProducts.map(createCart)}
-        <Cart />
-      </div>
-      <SimilarProduct />
-      {similarProducts.map(createProduct)}
+    <div className="home-container">
+      <div className="home-body">
+        <Navbar />
+        <CartHeading />
+        <div>
+          {cartProducts.map(createCart)}
+          <Cart />
+        </div>
 
-      <div>
-        <PreviousButton onClick={handlePreviousClick} />
-        <NextButton onClick={handleNextClick} />
+        <div className="heading available-products">
+          <div>
+            <SimilarProduct />
+          </div>
+          <div className="new-products">
+            {availableProducts.map(createProduct)}
+          </div>
+          <div className="control-container">
+            <div className="home-control">
+              <PreviousButton onClick={handlePreviousClick} />
+              <NextButton onClick={handleNextClick} />
+            </div>
+          </div>
+        </div>
       </div>
-
       <Footer />
     </div>
   );

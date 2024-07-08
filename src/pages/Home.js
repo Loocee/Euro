@@ -37,12 +37,13 @@ export default function Home() {
             <AvailableProduct />
           </div>
           <div className="new-products">
-            {" "}
             {availableProducts.map(createProduct)}
           </div>
-          <div className="home-control">
-            <PreviousButton onClick={handlePreviousClick} />
-            <NextButton onClick={handleNextClick} />
+          <div className="control-container">
+            <div className="home-control">
+              <PreviousButton onClick={handlePreviousClick} />
+              <NextButton onClick={handleNextClick} />
+            </div>
           </div>
         </div>
       </div>
