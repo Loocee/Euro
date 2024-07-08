@@ -4,7 +4,7 @@ import { para } from "../productImage";
 export default function Header() {
   return (
     <header>
-      <div className="container header-container">
+      <div className="header-container">
         <div>
           <h1>We are timeless</h1>
         </div>

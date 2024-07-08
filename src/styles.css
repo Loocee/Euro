@@ -49,7 +49,8 @@ footer {
   display: grid;
   gap: auto;
 }
-.header {
+
+header {
   background-image: url("./images/background.png");
   background-size: cover;
   background-position: center;
@@ -61,7 +62,9 @@ footer {
   font-size: 64px;
 }
 
-.header-container p {
+.header-container p,
+.right-left-top h3,
+.font-size-24 {
   font-size: 24px;
 }
 
@@ -103,19 +106,23 @@ nav {
 .home-control {
   width: 428px;
   height: 43px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .home-control,
-.footer-second-div {
+.footer-second-div,
+.trusted,
+.card-card,
+.card-right *,
+.space-between {
   display: flex;
   justify-content: space-between;
 }
 
 .home-control,
 .legal-div p,
-footer span {
+footer span,
+.font-size-20,
+.footer-slogan {
   font-size: 20px;
 }
 .home-previous {
@@ -135,6 +142,10 @@ footer {
   padding: 20px 52.5px;
 }
 
+footer h4 {
+  font-size: 48px;
+}
+
 footer hr {
   width: 1407px;
 }
@@ -142,7 +153,6 @@ footer hr {
 .footer-slogan {
   width: 452px;
   height: 54px;
-  font-size: 20px;
 }
 
 .legal-div {
@@ -161,4 +171,87 @@ footer hr {
 .trusted {
   width: 742px;
   height: 30.47px;
+}
+
+.cart-grid {
+  display: grid;
+  grid-template-columns: 935px 449px;
+}
+.card {
+  width: 935px;
+  height: 335px !important;
+}
+
+.card-right,
+.card-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-card {
+  width: 810px;
+  height: 260px;
+}
+
+.card-left {
+  width: 225px;
+}
+
+.card-right {
+  width: 555px;
+}
+.card-right * {
+  height: 106px;
+}
+.right-left {
+  width: 318px;
+}
+
+.right-right {
+  width: 202px;
+}
+
+.right-right p {
+  text-align: right;
+  align-self: flex-end;
+}
+
+.right-left-top,
+.right-left,
+.right-right {
+  display: flex;
+  flex-direction: column;
+}
+.right-left-top {
+  height: 59px;
+}
+
+.right-left-top p,
+.font-size-16 {
+  font-size: 16px;
+}
+
+.right-left-bottom button {
+  width: 140px;
+  height: 33px;
+}
+
+.right-right-bottom * {
+  height: 33px;
+}
+
+.cart-div {
+  width: 449px;
+  height: 1006px !important;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.cart-div-div {
+  width: 329px;
+  height: 242px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

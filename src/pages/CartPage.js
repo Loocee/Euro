@@ -31,8 +31,8 @@ function CartPage() {
       <div className="home-body">
         <Navbar />
         <CartHeading />
-        <div>
-          {cartProducts.map(createCart)}
+        <div className="cart-grid">
+          <div> {cartProducts.map(createCart)}</div>
           <Cart />
         </div>
 
@@ -41,7 +41,7 @@ function CartPage() {
             <SimilarProduct />
           </div>
           <div className="new-products">
-            {availableProducts.map(createProduct)}
+            {similarProducts.map(createProduct)}
           </div>
           <div className="control-container">
             <div className="home-control">
