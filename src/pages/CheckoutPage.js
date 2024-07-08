@@ -26,7 +26,7 @@ function CheckoutPage() {
           <Payment />
         </div>
         <div className="right">
-          <Carousel />
+          <ContinuePayment />
         </div>
       </div>
       <Footer />

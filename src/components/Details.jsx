@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { PreviousButtonIcon, NextButtonIcon } from "../components/Control";
-import { Carousel } from "../components/CarouselIcon";
+import Carousel from "../components/CarouselIcon";
 
 export function TopLeft(props) {
   return (
