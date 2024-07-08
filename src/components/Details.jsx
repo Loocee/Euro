@@ -115,6 +115,60 @@ export function Payment() {
           Bank Transfer
         </button>
       </div>
+      <form>
+        <div>
+          <label htmlFor="input-cardname" className="form-label">
+            Card Holder Name
+          </label>
+          <input
+            type="text"
+            id="input-cardname"
+            className="form-control"
+            placeholder="Joseph"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="input-cardnum" className="form-label">
+            Card Holder Number
+          </label>
+          <input
+            type="text"
+            id="input-cardnum"
+            className="form-control"
+            pattern="[0-9]{12}"
+            placeholder="674xxx39xx13"
+            required
+          />
+        </div>
+        <div>
+          <div>
+            <label htmlFor="input-state" className="form-label">
+              State
+            </label>
+            <input
+              type="text"
+              id="input-state"
+              className="form-control"
+              placeholder="Lagos State"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="input-number" className="form-label">
+              Phone Number
+            </label>
+            <input
+              type="text"
+              id="input-number"
+              className="form-control"
+              pattern="[0-9]{11}"
+              placeholder="07013213455"
+              required
+            />
+          </div>
+        </div>
+      </form>
     </div>
   );
 }
