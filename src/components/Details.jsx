@@ -1,4 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { PreviousButtonIcon, NextButtonIcon } from "../components/Control";
+import { Carousel } from "../components/CarouselIcon";
 
 export function TopLeft(props) {
   return (
@@ -174,6 +177,47 @@ export function Payment() {
           </label>
         </div>
       </form>
+    </div>
+  );
+}
+
+export function ContinuePayment() {
+  const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    navigate("/success");
+  };
+  const handlePreviousClick = () => {
+    // Code to handle previous button click
+  };
+
+  const handleNextClick = () => {
+    // Code to handle next button click
+  };
+
+  return (
+    <div>
+      <div>
+        <PreviousButtonIcon onClick={handlePreviousClick} />
+        <Carousel />
+        <NextButtonIcon onClick={handleNextClick} />
+      </div>
+      <div>
+        <div>
+          <h4>Subtotal</h4>
+          <h4>3200 USD</h4>
+        </div>
+        <div>
+          <h4>Shipping</h4>
+          <h4>60 USD</h4>
+        </div>
+        <div>
+          <h4>Total</h4>
+          <h4>1700 USD</h4>
+        </div>
+        <button onClick={handleCheckout}>Continue to Payment</button>
+        <button>Add More Items</button>
+      </div>
     </div>
   );
 }

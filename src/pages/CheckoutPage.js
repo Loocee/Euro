@@ -2,7 +2,12 @@ import React from "react";
 import { Navbar } from "../components/Nav";
 import { CheckoutHeading } from "../components/Heading";
 import Footer from "../components/Footer";
-import { TopLeft, Details, Payment } from "../components/Details";
+import {
+  TopLeft,
+  Details,
+  Payment,
+  ContinuePayment,
+} from "../components/Details";
 import { shipOption } from "../productImage";
 
 function createShippingOptions(option) {
@@ -15,9 +20,14 @@ function CheckoutPage() {
       <Navbar />
       <CheckoutHeading />
       <div>
-        {shipOption.map(createShippingOptions)}
-        <Details />
-        <Payment />
+        <div className="left">
+          {shipOption.map(createShippingOptions)}
+          <Details />
+          <Payment />
+        </div>
+        <div className="right">
+          <Carousel />
+        </div>
       </div>
       <Footer />
     </div>

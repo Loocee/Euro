@@ -133,3 +133,18 @@ export const shipOption = [
     text: "Swift Delivery",
   },
 ];
+
+export const checkoutProducts = [
+  {
+    id: 1,
+    imgURL: "./images/image48.png",
+  },
+  {
+    id: 2,
+    imgURL: "./images/image 35.png",
+  },
+  {
+    id: 3,
+    imgURL: "./images/image 44.png",
+  },
+];
