@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
-import SuccessPage from "./pages/CheckoutPage";
+import SuccessPage from "./pages/Success";
 
 export default function App() {
   return (

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { ReactComponent as Logo } from "../images/Eurosial.svg";
 import { ReactComponent as Verizon } from "../images/Logo.svg.svg";
 import { ReactComponent as Paypal } from "../images/paypal_logo.svg.svg";
 import { ReactComponent as Mastercard } from "../images/mastercard_symbol.svg.svg";
@@ -24,11 +23,11 @@ export default function Footer() {
 
   return (
     <footer>
-      <Logo />
+      <h4>Eurosial</h4>
       <hr />
 
       <div>
-        <div>
+        <div className="footer-slogan">
           <p>{para}</p>
         </div>
         <div>
@@ -42,10 +41,10 @@ export default function Footer() {
         </div>
       </div>
       <div>
-        <div>
+        <div className="copy">
           <p>All rights reserved &copy; {year}</p>
         </div>
-        <div>
+        <div className="trusted">
           <span>Trusted by</span>
           <Verizon />
           <Paypal />

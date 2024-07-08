@@ -1,26 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { ReactComponent as Logo } from "../images/Eurosial.svg";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <div className="navbar-brand">
           <Logo />
         </div>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button className="navbar-toggler" type="button" onClick={handleToggle}>
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}>
           <div className="navbar-middle mx-auto">
             <ul className="navbar-nav">
               <li className="nav-item">
@@ -76,7 +73,7 @@ export const Filter = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar filter navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <form className="form-inline" onSubmit={handleSearch}>
           <div className="input-group">

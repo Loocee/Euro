@@ -21,19 +21,32 @@ export default function Home() {
   };
 
   return (
-    <>
-      <Navbar />
-      <Header />
-      <Filter />
-      <NewProduct />
-      {newProducts.map(createProduct)}
-      <AvailableProduct />
-      {availableProducts.map(createProduct)}
-      <div>
-        <PreviousButton onClick={handlePreviousClick} />
-        <NextButton onClick={handleNextClick} />
+    <div className="home-container">
+      <div className="home-body">
+        <Navbar />
+        <Header />
+        <Filter />
+        <div className="heading new-product">
+          <div>
+            <NewProduct />
+          </div>
+          <div className="new-products"> {newProducts.map(createProduct)}</div>
+        </div>
+        <div className="heading available-products">
+          <div>
+            <AvailableProduct />
+          </div>
+          <div className="new-products">
+            {" "}
+            {availableProducts.map(createProduct)}
+          </div>
+          <div className="home-control">
+            <PreviousButton onClick={handlePreviousClick} />
+            <NextButton onClick={handleNextClick} />
+          </div>
+        </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

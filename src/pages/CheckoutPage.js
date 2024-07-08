@@ -8,10 +8,15 @@ import {
   Payment,
   ContinuePayment,
 } from "../components/Details";
-import { shipOption } from "../productImage";
+import { shipOption, checkoutProducts } from "../productImage";
+import Images from "../components/Images";
 
 function createShippingOptions(option) {
   return <TopLeft key={option.id} text={option.text} />;
+}
+
+function createCheckoutImages(image) {
+  return <Images key={image.id} text={image.imgURL} />;
 }
 
 function CheckoutPage() {
@@ -26,6 +31,7 @@ function CheckoutPage() {
           <Payment />
         </div>
         <div className="right">
+          <div>{checkoutProducts.map(createCheckoutImages)}</div>
           <ContinuePayment />
         </div>
       </div>

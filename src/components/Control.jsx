@@ -2,7 +2,7 @@ import React from "react";
 
 const PreviousButton = ({ onClick }) => {
   return (
-    <button onClick={onClick}>
+    <button className="home-previous" onClick={onClick}>
       <svg
         width="15"
         height="21"
@@ -22,7 +22,7 @@ const PreviousButton = ({ onClick }) => {
 
 const NextButton = ({ onClick }) => {
   return (
-    <button onClick={onClick}>
+    <button className="home-next" onClick={onClick}>
       Next
       <svg
         width="15"

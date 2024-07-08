@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Legal() {
   return (
-    <div>
+    <div className="legal-div">
       <h3>Legal</h3>
       <div>
         <p>Shipping</p>

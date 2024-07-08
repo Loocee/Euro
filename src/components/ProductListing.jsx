@@ -5,7 +5,7 @@ import Images from "./Images";
 
 export function List(props) {
   return (
-    <div className="card">
+    <div className="card product-frame">
       <div className="top">
         <Like />
         <Images img={props.img} />
