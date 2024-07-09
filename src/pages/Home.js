@@ -19,35 +19,31 @@ export default function Home() {
   const handleNextClick = () => {
     // Code to handle next button click
   };
-
   return (
-    <div className="home-container">
-      <div className="home-body">
-        <Navbar />
-        <Header />
-        <Filter />
-        <div className="heading new-product">
-          <div>
-            <NewProduct />
-          </div>
-          <div className="new-products"> {newProducts.map(createProduct)}</div>
+    <div className="home-body">
+      <Navbar />
+      <Header />
+      <Filter />
+      <div className="heading new-product">
+        <div>
+          <NewProduct />
         </div>
-        <div className="heading available-products">
-          <div>
-            <AvailableProduct />
-          </div>
-          <div className="new-products">
-            {availableProducts.map(createProduct)}
-          </div>
-          <div className="control-container">
-            <div className="home-control">
-              <PreviousButton onClick={handlePreviousClick} />
-              <NextButton onClick={handleNextClick} />
-            </div>
+        <div className="new-products"> {newProducts.map(createProduct)}</div>
+      </div>
+      <div className="heading available-products">
+        <div>
+          <AvailableProduct />
+        </div>
+        <div className="new-products">
+          {availableProducts.map(createProduct)}
+        </div>
+        <div className="control-container">
+          <div className="home-control">
+            <PreviousButton onClick={handlePreviousClick} />
+            <NextButton onClick={handleNextClick} />
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

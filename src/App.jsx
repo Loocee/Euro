@@ -4,19 +4,24 @@ import Home from "./pages/Home";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import SuccessPage from "./pages/Success";
+import Footer from "./components/Footer";
 
-export default function App() {
+function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="/shop" element={<Home />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
-          <Route path="/success" element={<SuccessPage />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <div className="content">
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/shop" element={<Home />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="/success" element={<SuccessPage />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
+export default App;

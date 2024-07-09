@@ -51,7 +51,6 @@ function CartPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

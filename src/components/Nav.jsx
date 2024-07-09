@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as Logo } from "../images/Eurosial.svg";
 import { Link } from "react-router-dom";
-
+import { ReactComponent as Search } from "../images/Vector (5).svg";
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -9,7 +9,7 @@ export const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg">
       <div className="container">
         <div className="navbar-brand">
           <Logo />
@@ -48,10 +48,10 @@ export const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-nav navbar-right">
-            <Link to="/sign-in" className="nav-link">
+            <Link to="/sign-in" className="nav-link sign-in">
               Sign In
             </Link>
-            <button className="btn btn-primary">Create Account</button>
+            <button className="btn nav-btn">Create Account</button>
           </div>
         </div>
       </div>
@@ -73,14 +73,14 @@ export const Filter = () => {
   };
 
   return (
-    <nav className="navbar filter navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar filter navbar-expand-lg">
       <div className="container">
         <form className="form-inline" onSubmit={handleSearch}>
           <div className="input-group">
             <input
               className="form-control"
               type="search"
-              placeholder="Search"
+              placeholder={Search}
               aria-label="Search"
             />
           </div>

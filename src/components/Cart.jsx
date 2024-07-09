@@ -29,7 +29,9 @@ export function Cart() {
             <h4>1700 USD</h4>
           </div>
         </div>
-        <button onClick={handleCheckout}>Proceed to Checkout</button>
+        <button className="cart-button" onClick={handleCheckout}>
+          Proceed to Checkout
+        </button>
       </div>
     </div>
   );

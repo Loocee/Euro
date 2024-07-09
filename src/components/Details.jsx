@@ -1,36 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { PreviousButtonIcon, NextButtonIcon } from "../components/Control";
 import Carousel from "../components/CarouselIcon";
 
 export function TopLeft(props) {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleRadioClick = () => {
+    setIsChecked(!isChecked);
+  };
+
   return (
-    <div>
-      <h3>Shipping Method</h3>
-      <div>
-        <div>
-          <h4>{props.text}</h4>
-          <p>We ship immediately take between 7 - 8 working days</p>
-        </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-          />
-        </div>
+    <div className="shipping-option">
+      <div className="shipping-option-text">
+        <h4 className="font-size-24">{props.text}</h4>
+        <p className="font-size-16">
+          We ship immediately take between 7 - 8 working days
+        </p>
+      </div>
+      <div className="shipping-option-radio">
+        <input
+          className={`custom-radio ${isChecked ? "checked" : ""}`}
+          type="radio"
+          name="flexRadioDefault"
+          checked={isChecked}
+          onChange={handleRadioClick}
+          style={{ color: isChecked ? "#606060" : "" }}
+        />
       </div>
     </div>
   );
 }
-
 export function Details() {
   return (
-    <div>
+    <div className="checkout-left-div detail-div">
       <h3>Personal Details</h3>
-      <form>
-        <div>
-          <div>
+      <form className="payment-form">
+        <div className="form-group-cvv space-between">
+          <div className="cvv">
             <label htmlFor="input-fname" className="form-label">
               First Name
             </label>
@@ -42,7 +49,7 @@ export function Details() {
               required
             />
           </div>
-          <div>
+          <div className="cvv">
             <label htmlFor="input-sname" className="form-label">
               Surname
             </label>
@@ -55,7 +62,7 @@ export function Details() {
             />
           </div>
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="input-state" className="form-label">
             State
           </label>
@@ -67,7 +74,7 @@ export function Details() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="input-number" className="form-label">
             Phone Number
           </label>
@@ -80,7 +87,7 @@ export function Details() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="email" className="form-label">
             Email Address
           </label>
@@ -98,28 +105,32 @@ export function Details() {
 
 export function Payment() {
   return (
-    <div>
+    <div className="checkout-left-div pay-div">
       <h3>Payment</h3>
-      <div>
-        <button>
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-          />
-          Card
-        </button>
-        <button>
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-          />
-          Bank Transfer
-        </button>
-      </div>
-      <form>
-        <div>
+      <form className="payment-form">
+        <div className="payment-options">
+          <label className="radio-button">
+            <button className="button-label">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+              />
+              Card
+            </button>
+          </label>
+          <label className="radio-button">
+            <button className="button-label grey">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+              />
+              Bank Transfer
+            </button>
+          </label>
+        </div>
+        <div className="form-group">
           <label htmlFor="input-cardname" className="form-label">
             Card Holder Name
           </label>
@@ -131,7 +142,7 @@ export function Payment() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="input-cardnum" className="form-label">
             Card Holder Number
           </label>
@@ -144,8 +155,8 @@ export function Payment() {
             required
           />
         </div>
-        <div>
-          <div>
+        <div className="space-between form-group-cvv">
+          <div className="cvv">
             <label htmlFor="input-date" className="form-label">
               Expiration date
             </label>
@@ -156,7 +167,7 @@ export function Payment() {
               required
             />
           </div>
-          <div>
+          <div className="cvv">
             <label htmlFor="input-cvv" className="form-label">
               CVV
             </label>
@@ -170,13 +181,13 @@ export function Payment() {
             />
           </div>
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" />
-          <label class="form-check-label">
-            Save my details for future purchases
-          </label>
-        </div>
       </form>
+      <div className="mb-3 form-check">
+        <input type="checkbox" className="form-check-input" />
+        <label className="form-check-label">
+          Save my details for future purchases
+        </label>
+      </div>
     </div>
   );
 }
@@ -196,27 +207,31 @@ export function ContinuePayment() {
   };
 
   return (
-    <div>
-      <div>
+    <div className="continue-div-bottom">
+      <div className="carousel-div">
         <PreviousButtonIcon onClick={handlePreviousClick} />
         <Carousel />
         <NextButtonIcon onClick={handleNextClick} />
       </div>
-      <div>
-        <div>
-          <h4>Subtotal</h4>
-          <h4>3200 USD</h4>
+      <div className="pricing-div">
+        <div className="space-between font-size-20">
+          <span>Subtotal</span>
+          <span>3200 USD</span>
         </div>
-        <div>
-          <h4>Shipping</h4>
-          <h4>60 USD</h4>
+        <div className="space-between font-size-20">
+          <span>Shipping</span>
+          <span>60 USD</span>
         </div>
-        <div>
+        <div className="space-between font-size-24">
           <h4>Total</h4>
           <h4>1700 USD</h4>
         </div>
-        <button onClick={handleCheckout}>Continue to Payment</button>
-        <button>Add More Items</button>
+      </div>
+      <div className="carousel-btn-div">
+        <button className="carousel-div-btn" onClick={handleCheckout}>
+          Continue to Payment
+        </button>
+        <button className="carousel-div-btn gray">Add More Items</button>
       </div>
     </div>
   );
