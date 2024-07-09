@@ -37,7 +37,7 @@ export default function Home() {
         <div className="new-products">
           {availableProducts.map(createProduct)}
         </div>
-        <div className="control-container">
+        <div className="control-container center-container">
           <div className="home-control">
             <PreviousButton onClick={handlePreviousClick} />
             <NextButton onClick={handleNextClick} />

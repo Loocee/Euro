@@ -6,7 +6,6 @@
 .control-container app,
 .payment-options,
 .category-filter,
-.price-filter,
 .home-body,
 .right-left-top,
 .right-left,
@@ -21,7 +20,11 @@
 .carousel-image-div,
 header,
 .left-column,
-.right-column {
+.right-column,
+.center-container,
+.product-frame,
+.bottom,
+.add-cart {
   display: flex;
 }
 .app,
@@ -33,7 +36,9 @@ header,
 .form-group,
 .payment-form,
 .carousel-btn-div,
-.right-column {
+.right-column,
+.category-filter div,
+.product-frame {
   flex-direction: column;
 }
 .content {
@@ -57,7 +62,12 @@ body {
 .carousel-div,
 .carousel-image-div,
 header,
-.left-column {
+.left-column,
+.category-filter,
+.center-container,
+.product-frame,
+.bottom,
+.add-cart {
   justify-content: center;
   align-items: center;
 }
@@ -85,6 +95,9 @@ header,
   padding: 28px 0px;
 }
 
+.cart-body {
+  height: 3400px;
+}
 .home-body,
 .new-product,
 .available-products,
@@ -140,6 +153,26 @@ nav {
   height: 64px;
 }
 
+.category-filter {
+  width: 280px;
+  height: 50px;
+}
+.category-filter div,
+select {
+  width: 145px !important;
+  height: 50px;
+  background-color: #eeeeee;
+  border: none !important;
+  border-radius: 0 !important;
+}
+.center-container {
+  height: 100%;
+}
+.search {
+  width: 436px !important;
+  height: 56px;
+}
+
 .heading {
   width: 1400px;
 }
@@ -167,12 +200,31 @@ h2,
 .product-frame {
   width: 448px;
   height: 579.31px;
+  background-color: #fefefe;
+  border-radius: 5px;
+}
+
+.top {
+  width: 380px;
+  height: 427.22px;
+}
+
+.bottom {
+  width: 380px;
+  height: 84px;
+}
+.add-cart {
+  width: 52px;
+  height: 52px;
+  border: none;
 }
 
 .available-products {
   height: 2639px;
 }
-
+.similar-products {
+  height: 1783.93px;
+}
 .home-control {
   width: 428px;
   height: 43px;
@@ -205,6 +257,13 @@ footer span,
 .home-next {
   width: 116px;
   height: 43px;
+}
+
+.home-next,
+.home-previous {
+  border: none;
+  background-color: #ffffff;
+  border-radius: 5px;
 }
 
 footer {
@@ -297,8 +356,9 @@ footer hr {
 }
 
 .right-left-top p,
-.font-size-16 {
-  font-size: 16px;
+.font-size-16,
+.category-filter div {
+  font-size: 16px !important;
 }
 
 .right-left-bottom button {

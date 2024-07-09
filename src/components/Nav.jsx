@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as Logo } from "../images/Eurosial.svg";
 import { Link } from "react-router-dom";
-import { ReactComponent as Search } from "../images/Vector (5).svg";
+
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -78,42 +78,46 @@ export const Filter = () => {
         <form className="form-inline" onSubmit={handleSearch}>
           <div className="input-group">
             <input
-              className="form-control"
+              className="form-control search"
               type="search"
-              placeholder={Search}
+              placeholder="Search"
               aria-label="Search"
             />
           </div>
         </form>
         <div className="category-filter">
-          <div>
+          <div className="center-container">
             <label htmlFor="category">Category:</label>
           </div>
-          <select
-            id="category"
-            className="form-control"
-            onChange={handleCategoryFilter}
-          >
-            <option value="">All</option>
-            <option value="category1">Category 1</option>
-            <option value="category2">Category 2</option>
-            {/* Add more category options here */}
-          </select>
-        </div>
-        <div className="price-filter">
           <div>
+            {" "}
+            <select
+              id="category"
+              className="form-control"
+              onChange={handleCategoryFilter}
+            >
+              <option value="">Luxury</option>
+              <option value="category1">Category 1</option>
+              <option value="category2">Category 2</option>
+            </select>
+          </div>
+        </div>
+        <div className="category-filter">
+          <div className="center-container">
             <label htmlFor="price">Price:</label>
           </div>
-          <select
-            id="price"
-            className="form-control"
-            onChange={handlePriceFilter}
-          >
-            <option value="">All</option>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-          </select>
+          <div>
+            <select
+              id="price"
+              className="form-control"
+              onChange={handlePriceFilter}
+            >
+              <option value="">$1200 - $2000</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
         </div>
       </div>
     </nav>

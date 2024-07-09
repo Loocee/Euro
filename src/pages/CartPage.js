@@ -27,8 +27,8 @@ function CartPage() {
   };
 
   return (
-    <div className="home-container">
-      <div className="home-body">
+    <div className="home-container cart-container">
+      <div className="home-body cart-body">
         <Navbar />
         <CartHeading />
         <div className="cart-grid">
@@ -36,14 +36,14 @@ function CartPage() {
           <Cart />
         </div>
 
-        <div className="heading available-products">
+        <div className="heading available-products similar-products">
           <div>
             <SimilarProduct />
           </div>
           <div className="new-products">
             {similarProducts.map(createProduct)}
           </div>
-          <div className="control-container">
+          <div className="control-container center-container">
             <div className="home-control">
               <PreviousButton onClick={handlePreviousClick} />
               <NextButton onClick={handleNextClick} />
